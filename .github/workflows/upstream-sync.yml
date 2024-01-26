@@ -19,4 +19,4 @@ jobs:
       uses: actions/checkout@v3
       with:
       # GitHub public upstream repo
-        upstream_repo: https://github.com/Azure/Azure-Sentinel.git
+        upstream_repo: https://github.com/arrakis-test-org/arrakis-test-repo.git
