@@ -1,0 +1,22 @@
+name: Upstream Sync
+
+on: 
+  schedule:
+    - cron: "*/15 * * * *"
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+    
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: GitHub Sync to Upstream Repository
+      uses: actions/checkout@v3
+      with:
+      # GitHub public upstream repo
+        upstream_repo: https://github.com/Azure/Azure-Sentinel.git
