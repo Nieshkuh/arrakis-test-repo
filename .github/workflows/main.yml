@@ -5,7 +5,7 @@ env:
   UPSTREAM_URL: "https://github.com/arrakis-test-org/arrakis-test-repo.git"
   # Required, token to authenticate bot, could use ${{ secrets.GITHUB_TOKEN }} 
   # Over here, we use a PAT instead to authenticate workflow file changes.
-  WORKFLOW_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  WORKFLOW_TOKEN: ${{ secrets.PAT }}
   # Optional, defaults to main
   UPSTREAM_BRANCH: "main"
   # Optional, defaults to UPSTREAM_BRANCH
@@ -35,7 +35,7 @@ jobs:
           upstream_repo: ${{ env.UPSTREAM_URL }}
           upstream_branch: ${{ env.UPSTREAM_BRANCH }}
           downstream_branch: ${{ env.DOWNSTREAM_BRANCH }}
-          token: ${{ env.GITHUB_TOKEN }}
+          token: ${{ env.PAT }}
           fetch_args: ${{ env.FETCH_ARGS }}
           merge_args: ${{ env.MERGE_ARGS }}
           push_args: ${{ env.PUSH_ARGS }}
