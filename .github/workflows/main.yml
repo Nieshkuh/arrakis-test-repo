@@ -1,8 +1,5 @@
 name: repo sync
 
-env:
-  GITHUB_TOKEN: ${{ secrets.PAT }}
-
 on: 
   schedule:
     - cron: "*/10 * * * *"
@@ -21,4 +18,4 @@ jobs:
         source_repo: "https://github.com/arrakis-test-org/arrakis-test-repo.git"
         source_branch: "*"
         destination_branch: "*"
-
+        GITHUB_TOKEN: ${{ secrets.PAT }}
