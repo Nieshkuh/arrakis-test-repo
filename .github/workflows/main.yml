@@ -1,7 +1,7 @@
 name: repo sync
 
 env:
-  GITHUB_TOKEN: ${{ secrets.TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.PAT }}
 
 on: 
   schedule:
@@ -21,4 +21,4 @@ jobs:
         source_repo: "https://github.com/arrakis-test-org/arrakis-test-repo.git"
         source_branch: "*"
         destination_branch: "*"
-        github_token: ${{ secrets.PAT }}
+
