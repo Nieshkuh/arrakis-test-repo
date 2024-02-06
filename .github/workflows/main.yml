@@ -1,5 +1,8 @@
 name: repo sync
 
+env:
+  GITHUB_TOKEN: ${{ secrets.TOKEN }}
+
 on: 
   schedule:
     - cron: "*/10 * * * *"
